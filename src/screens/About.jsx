@@ -1,37 +1,19 @@
-import React from "react";
+import React from 'react'
 
 export default function About() {
   return (
-    <div className="container border" >
-      <h3 className="text-center text-xs-start py-4">About ASS</h3>
-      <p className="fs-4 lh-lg shadow-sm border border-danger p-4 rounded text-muted">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum autem
-        nesciunt mollitia. Illo itaque iusto enim numquam soluta sapiente
-        tempora facilis vero consequuntur obcaecati similique, consectetur quasi
-        animi placeat optio. Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Commodi ad quas, libero nobis temporibus, laudantium neque
-        suscipit laboriosam doloremque eaque, laborum consequatur distinctio eum
-        modi veritatis dolor sequi itaque quibusdam? Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Ipsa aspernatur temporibus iusto fugiat
-        ullam sequi esse expedita. Repellendus repudiandae explicabo voluptatum
-        id facilis similique, ipsa aliquam, quos provident voluptate quasi!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
-        accusantium nulla ea totam voluptates magnam adipisci ipsum natus
-        suscipit voluptas cumque nam a laboriosam saepe, animi ipsam aut illum.
-        Sunt? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-        quaerat earum eum iusto asperiores doloribus minima obcaecati
-        repudiandae, recusandae molestias eligendi ipsam expedita architecto
-        eveniet excepturi, sed quod officia cumque.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-        aliquam perspiciatis deleniti pariatur rerum eveniet cum ut eius, ipsam
-        quas, dicta similique consequatur. Cumque ab molestiae ex beatae vero.
-        Similique. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Eaque nobis, illo sint odit consectetur nemo fugiat totam laborum ab
-        quos maxime eius soluta? Deserunt, laboriosam itaque saepe amet
-        consequuntur voluptate!
-      </p>
-    </div>
-  );
+    <div className='container'>
+        <h3 className='text-center text-uppercase py-4'>About us</h3>
+        <div className=' text-muted shadow-sm  p-4 fs-3 lh-s'>
+        <p >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Ipsa facere recusandae maxime, ex vero quod labore officiis 
+           natus velit perspiciatis dolor libero beatae
+          eum expedita odit quaerat nihil facilis quam.</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eius eveniet porro illo aliquam accusamus officiis adipisci magnam in impedit, illum modi, eligendi nulla, repellendus earum totam numquam nesciunt beatae.
+          Consequatur accusamus tempore eveniet ea nisi ad obcaecati repellat asperiores suscipit sapiente, facere quo vel, sequi quibusdam. Aliquam beatae magni repellat obcaecati perferendis suscipit sequi officiis, accusamus inventore non dicta?
+          Enim doloribus laboriosam ut animi ipsa praesentium. Excepturi velit blanditiis libero earum, voluptatibus, necessitatibus mollitia est ratione quam cupiditate autem vero explicabo doloremque delectus? Ipsum modi facere eaque voluptates sed?
+          Minus molestias ab praesentium recusandae rem est ex, temporibus nihil eveniet dignissimos, illum aliquam? Vero vitae doloremque tempora harum quos sapiente excepturi. Doloribus, expedita itaque! Quaerat similique dolores ut. Ducimus!</p>
+        </div>
+        </div>
+  )
 }

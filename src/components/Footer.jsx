@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-export default function  Footer() {
+function Footer() {
     return (
         <div className='mt-5 container-fluid bg-primary bg-gradient text-white' style={{ minHeight: '12rem' }}>
             <div className='row pt-4 text-center'>
@@ -32,3 +32,5 @@ export default function  Footer() {
         </div>
     )
 }
+
+export default Footer
