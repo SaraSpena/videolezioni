@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="container border">
+    <div className="container border" >
       <h3 className="text-center text-xs-start py-4">About ASS</h3>
       <p className="fs-4 lh-lg shadow-sm border border-danger p-4 rounded text-muted">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum autem
