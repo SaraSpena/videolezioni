@@ -3,7 +3,7 @@ import './Home.css'
 function Home() {
     return (
         <div>
-            <section className='hero-section mt-1'>
+            <section className='hero-section'>
                 <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -47,42 +47,116 @@ function Home() {
                 <h3 className='text-center text-uppercase pt-4'>Featured posts</h3>
                 <div className='row'>
                     <div className='col-lg-4 col-md-4 col-sm-12'>
-                        <div class="card">
-                            <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" class="card-img-top" alt="casetta"></img>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                        <div className="card">
+                            <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" className="card-img-top" alt="casetta"></img>
+                            <div className="card-body">
+                                <h5 className="card-title">Sora kingdomhearts 2</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                    <a href="#" className="btn btn-warning">Go somewhere</a>
+                                </div>                            </div>
                         </div>
                     </div>
                     <div className='col-lg-4 col-md-4 col-sm-12'>
-                        <div class="card">
-                            <img src="https://w0.peakpx.com/wallpaper/462/777/HD-wallpaper-kingdom-hearts-2-disney-thumbnail.jpg" class="card-img-top" alt="casetta"></img>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                        <div className="card">
+                            <img src="https://w0.peakpx.com/wallpaper/462/777/HD-wallpaper-kingdom-hearts-2-disney-thumbnail.jpg" className="card-img-top" alt="casetta"></img>
+                            <div className="card-body">
+                                <h5 className="card-title">The Kingdom Hearts</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                    <a href="#" className="btn btn-warning">Go somewhere</a>
+                                </div>                            </div>
                         </div>
                     </div>
                     <div className='col-lg-4 col-md-4 col-sm-12'>
-                        <div class="card">
-                            <img src="https://i.pinimg.com/originals/de/1f/70/de1f70c91e2d9744e4681673a2dc6c7e.jpg" class="card-img-top" alt="casetta"></img>
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <div className="card">
+                            <img src="https://i.pinimg.com/originals/de/1f/70/de1f70c91e2d9744e4681673a2dc6c7e.jpg" className="card-img-top" alt="casetta"></img>
+                            <div className="card-body">
+                                <h5 className="card-title">Falling into the darkness</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                    <a href="#" className="btn btn-warning">Go somewhere</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className='latest-posts'>
-                <h3 className='text-center text-uppercase pt-4'>Latest posts</h3>
+            <section className='latest-posts container pt-2'>
+                <h3 className='text-center text-uppercase py-4'>Latest posts</h3>
+                <div className='row'>
+                    <div className='col-lg-4 col-md-4 col-sm-12'>
+                        <div className="card">
+                            <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" className="card-img-top" alt="casetta"></img>
+                            <div className="card-body">
+                                <h5 className="card-title">Sora kingdomhearts 2</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                    <a href="#" className="btn btn-warning">Go somewhere</a>
+                                </div>                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-4 col-md-4 col-sm-12'>
+                        <div className="card">
+                            <img src="https://w0.peakpx.com/wallpaper/462/777/HD-wallpaper-kingdom-hearts-2-disney-thumbnail.jpg" className="card-img-top" alt="casetta"></img>
+                            <div className="card-body">
+                                <h5 className="card-title">The Kingdom Hearts</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                    <a href="#" className="btn btn-warning">Go somewhere</a>
+                                </div>                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-4 col-md-4 col-sm-12'>
+                        <div className="card">
+                            <img src="https://i.pinimg.com/originals/de/1f/70/de1f70c91e2d9744e4681673a2dc6c7e.jpg" className="card-img-top" alt="casetta"></img>
+                            <div className="card-body">
+                                <h5 className="card-title">Falling into the darkness</h5>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                    <a href="#" className="btn btn-warning">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className='container-fluid bg-primary bg-gradient mt-4' style={{minHeight:"130px"}}>
+            <div className='d-flex flex-column justify-content-center align-items-center'>
+                <i className='fa-solid fa-location-dot'></i>
+             <h3 className='text-white text-uppercase'>View All Posts</h3>
+            <button className='btn btn-warning'>View Posts</button>
+            </div>
             </section>
             <section className='our-portfolio'>
-                <h3 className='text-center text-uppercase pt-4'>Our Portfolio</h3>
+                <h3 className='text-center text-uppercase py-4'>Our Portfolio</h3>
+                <div className="container">
+                    <div className="row g-2">
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" className="card-img-top" alt="casetta"></img>
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" className="card-img-top" alt="casetta"></img>
+
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" className="card-img-top" alt="casetta"></img>
+
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" className="card-img-top" alt="casetta"></img>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     )
