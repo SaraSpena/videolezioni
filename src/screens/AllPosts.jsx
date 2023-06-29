@@ -1,13 +1,17 @@
 import { React, useState, useEffect } from "react";
+import { API_BASE_URL } from "../config/constant";
 
 export default function AllPosts() {
   const [posts, setPosts] = useState([]);
+  const [loader,setLoader]=useState(true);
   const getAllPosts = () => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
+    
+    fetch(`${API_BASE_URL}/posts`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
         setPosts(json);
+        setLoader(false);
       });
   };
   useEffect(() => {
@@ -19,7 +23,9 @@ export default function AllPosts() {
       <section className="featured-posts container">
         <h3 className="text-center text-uppercase pt-4">Featured posts</h3>
         <div className="row">
-          {posts.map((post,index)=>{
+        { loader?<div className="col-12 text-center"><div className="spinner-border text-primary" role="status">
+  <span className="visually-hidden">Loading...</span>
+</div></div> :  posts.map((post,index)=>{
             return <div className="col-lg-4 col-md-4 col-sm-12">
               <div className="card">
                 <img
