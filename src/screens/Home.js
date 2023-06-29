@@ -43,46 +43,121 @@ function Home() {
                     </button>
                 </div>
             </section>
-            <section className='featured-posts container'>
-                <h3 className='text-center text-uppercase pt-4'>Featured posts</h3>
+            <section className='featured-posts container pt-2'>
+                <h3 className='text-center text-uppercase  py-4'>Featured posts</h3>
+               
                 <div className='row'>
                     <div className='col-lg-4 col-md-4 col-sm-12'>
                         <div class="card">
-                            <img src="https://wallpaperaccess.com/full/2844626.jpg" class="card-img-top" alt="casetta"></img>
+                            <img src="https://i.pinimg.com/564x/7e/c8/1d/7ec81dea8efdd77961ff380027bd5e83.jpg" class="card-img-top" alt="casetta"></img>
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className='col-lg-4 col-md-4 col-sm-12'>
                         <div class="card">
-                            <img src="https://wallpaperaccess.com/full/1646374.jpg" class="card-img-top" alt="casetta"></img>
+                            <img src="https://pbs.twimg.com/media/FTLJI91VUAABQ_s.jpg" class="card-img-top" alt="casetta"></img>
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className='col-lg-4 col-md-4 col-sm-12'>
                         <div class="card">
-                            <img src="https://image.winudf.com/v2/image1/Y29tLmhhbXN0ZXJwaWN0dXJlczIuY3V0ZV93YWxscGVwYXJzX3NjcmVlbl8yXzE1ODY3NzYxNjRfMDEx/screen-2.webp?fakeurl=1&type=.webp" class="card-img-top" alt="casetta"></img>
+                            <img src="https://i.pinimg.com/564x/03/5f/53/035f534bdff20784828e8e258a87b4ac.jpg" class="card-img-top" alt="casetta"></img>
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                               <div className='d-grid'>
                                 <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className='latest-posts'>
-            <h3 className='text-center text-uppercase pt-4'>Latest posts</h3>
+            <section className='d-flex flex-column justify-content-center align-items-center bg-primary'>
+              <i class='fa-solid fa-location-dot'></i>
+                <h3 className='text-white text-uppercase'We have wide variety of Posts></h3>
+               <button className='btn btn-warning'>View all Posts</button>
             </section>
+            <section className='latest-posts pt-2'>
+            <h3 className='text-center text-uppercase py-4'>Latest posts</h3>
+            <div className='row'>
+                    <div className='col-lg-4 col-md-4 col-sm-12'>
+                        <div class="card">
+                            <img src="https://i.pinimg.com/564x/7e/c8/1d/7ec81dea8efdd77961ff380027bd5e83.jpg" class="card-img-top" alt="casetta"></img>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-4 col-md-4 col-sm-12'>
+                        <div class="card">
+                            <img src="https://pbs.twimg.com/media/FTLJI91VUAABQ_s.jpg" class="card-img-top" alt="casetta"></img>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <div className='d-grid'>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='col-lg-4 col-md-4 col-sm-12'>
+                        <div class="card">
+                            <img src="https://i.pinimg.com/564x/03/5f/53/035f534bdff20784828e8e258a87b4ac.jpg" class="card-img-top" alt="casetta"></img>
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                               <div className='d-grid'>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section className='our-portfolio'>
-            <h3 className='text-center text-uppercase pt-4'>Our Portfolio</h3>
+            <h3 className='text-center text-uppercase py-4'>Our Portfolio</h3>
+            <div className="container">
+  <div className="row g-2">
+    <div className="col-6">
+      <div className="p-3 border bg-light">
+      <img src="https://i.pinimg.com/564x/03/5f/53/035f534bdff20784828e8e258a87b4ac.jpg" class="card-img-top" alt="casetta"></img>
+      </div>
+    </div>
+    <div className="col-6">
+      <div className="p-3 border bg-light">
+      <img src="https://i.pinimg.com/564x/03/5f/53/035f534bdff20784828e8e258a87b4ac.jpg" class="card-img-top" alt="casetta"></img>
+        </div>
+    </div>
+    <div className="col-6">
+      <div className="p-3 border bg-light">
+      <img src="https://i.pinimg.com/564x/03/5f/53/035f534bdff20784828e8e258a87b4ac.jpg" class="card-img-top" alt="casetta"></img>
+        </div>
+    </div>
+    <div className="col-6">
+      <div className="p-3 border bg-light">
+      <img src="https://i.pinimg.com/564x/03/5f/53/035f534bdff20784828e8e258a87b4ac.jpg" class="card-img-top" alt="casetta"></img>
+        </div>
+    </div>
+  </div>
+</div>
             </section>
         </div>
     )
