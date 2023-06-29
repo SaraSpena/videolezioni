@@ -86,9 +86,9 @@ function Home() {
                 </div>
             </section>
             <section className='d-flex flex-column justify-content-center align-items-center bg-primary'>
-              <i class='fa-solid fa-location-dot'></i>
+              <i class='fs-1 text-warning my-3 fa-solid fa-location-dot'></i>
                 <h3 className='text-white text-uppercase'We have wide variety of Posts></h3>
-               <button className='btn btn-warning'>View all Posts</button>
+               <button className='btn btn-warning my-2 text-white text-uppercase'>View all Posts</button>
             </section>
             <section className='latest-posts pt-2'>
             <h3 className='text-center text-uppercase py-4'>Latest posts</h3>
