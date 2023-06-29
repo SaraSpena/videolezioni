@@ -111,9 +111,45 @@ export default function Home() {
       <section className="latest-posts">
         <h3 className="text-center text-uppercase pt-4">Latest posts</h3>
       </section>
+      <section className='container-fluid bg-primary bg-gradient mt-4' style={{minHeight:"130px"}}>
+            <div className='d-flex flex-column justify-content-center align-items-center'>
+                <i className='fa-solid fa-location-dot'></i>
+             <h3 className='text-white text-uppercase'>View All Posts</h3>
+            <button className='btn font-size-bold btn-warning'>View Posts</button>
+            </div>
+            </section>
       <section className="our-portfolio">
         <h3 className="text-center text-uppercase pt-4">Our Portfolio</h3>
+                <div className="container">
+                    <div className="row g-2">
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://www.animeclick.it/immagini/anime/Bocchi_the_Rock/gallery_original/Bocchi_the_Rock-634291cc3a318.jpg" className="card-img-top" alt="casetta"></img>
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://www.animeclick.it/immagini/anime/Bocchi_the_Rock/gallery_original/Bocchi_the_Rock-634291cc3a318.jpg" className="card-img-top" alt="casetta"></img>
+
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://www.animeclick.it/immagini/anime/Bocchi_the_Rock/gallery_original/Bocchi_the_Rock-634291cc3a318.jpg" className="card-img-top" alt="casetta"></img>
+
+                            </div>
+                        </div>
+                        <div className="col-6">
+                            <div className="p-1 border bg-light">
+                            <img src="https://www.animeclick.it/immagini/anime/Bocchi_the_Rock/gallery_original/Bocchi_the_Rock-634291cc3a318.jpg" className="card-img-top" alt="casetta"></img>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
       </section>
+     
     </div>
   );
 }
