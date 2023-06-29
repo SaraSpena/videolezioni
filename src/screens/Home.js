@@ -123,9 +123,9 @@ function Home() {
             </section>
             <section className='container-fluid bg-primary bg-gradient mt-4' style={{minHeight:"130px"}}>
             <div className='d-flex flex-column justify-content-center align-items-center'>
-                <i className='fa-solid fa-location-dot'></i>
+                <i className='fs-1 text-warning my-3 fa-solid fa-location-dot'></i>
              <h3 className='text-white text-uppercase'>View All Posts</h3>
-            <button className='btn btn-warning'>View Posts</button>
+            <button className='btn btn-warning my-2 text-uppercase'>View Posts</button>
             </div>
             </section>
             <section className='our-portfolio'>
@@ -152,7 +152,6 @@ function Home() {
                         <div className="col-6">
                             <div className="p-1 border bg-light">
                             <img src="https://i.pinimg.com/originals/46/49/9f/46499fbb5eefefa92209a43537c8444d.jpg" className="card-img-top" alt="casetta"></img>
-
                             </div>
                         </div>
                     </div>
