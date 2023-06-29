@@ -5,6 +5,7 @@ import Home from './screens/Home';
 import Contact from './screens/Contact';
 import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
+import AllPosts from './screens/AllPosts';
 function App() {
   return (
     <Router>
@@ -12,6 +13,7 @@ function App() {
       <NavBar></NavBar>
       <Routes>
         <Route exact path='/' element={<Home/>}></Route>
+        <Route exact path='/posts' element={<AllPosts/>}></Route>
         <Route exact path='/about' element={<About/>}></Route>
         <Route exact path='/contact' element={<Contact/>}></Route>
       </Routes>
