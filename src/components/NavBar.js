@@ -12,21 +12,21 @@ export default function NavBar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-            <NavLink className="nav-link active" aria-current="page"to="/">Home</NavLink>
+            <NavLink className="nav-link text-uppercase" to="/">Home</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link active" aria-current="page"to="/posts">Posts</NavLink>
+            <NavLink className="nav-link text-uppercase" to="/posts">All Posts</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link active" aria-current="page"to="/about">About Us</NavLink>
+            <NavLink className="nav-link text-uppercase" to="/about">About Us</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/contact">Contact</NavLink>
+            <NavLink className="nav-link text-uppercase" to="/contact">Contact</NavLink>
           </li>
         </ul>
         <form className="d-flex">
           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-          <button className="btn btn-outline-success" type="submit">Search</button>
+          <button className="btn btn-outline-danger" type="submit">Search</button>
         </form>
       </div>
     </div>
