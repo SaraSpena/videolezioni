@@ -45,7 +45,7 @@ export default function AllPosts() {
                                 <h5 className="card-title">{post.title}</h5>
                                 <p className="card-text">{post.body}</p>
                                 <div className='d-grid'>
-                                <Link to="#" className="btn btn-primary">Go somewhere</Link>
+                                <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-primary">Go somewhere</Link>
                                 </div>
                             </div>
                         </div>
