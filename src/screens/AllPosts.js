@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { API_BASE_URL } from '../config/constant';
-import {Link} from 'react'
+import {Link} from 'react-router-dom'
 export default function AllPosts() {
     //Creamo uan variabil per salvare tutti i post e un metodo
     //set per aggiornare il valore dei post
