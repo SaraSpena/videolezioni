@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { API_BASE_URL } from '../config/constant';
+import { Link } from 'react-router-dom';
 function AllPosts() {
     //Create a variable to store all posts and a set method to update the value of posts
     //useState hook helps us create this variable with empty array
@@ -42,7 +43,7 @@ function AllPosts() {
                                         <h5 className="card-title">{post.title}</h5>
                                         <p className="card-text">{post.body}</p>
                                         <div className='d-grid'>
-                                            <a href="#" className="btn btn-warning">Go somewhere</a>
+                                            <Link to="#" className="btn btn-warning">Go somewhere</Link>
                                         </div>
                                     </div>
                                 </div>
