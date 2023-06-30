@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from "react";
 import { API_BASE_URL } from "../config/constant";
-
+import { Link } from "react-router-dom";
 export default function AllPosts() {
   const [posts, setPosts] = useState([]);
   const [loader,setLoader]=useState(true);
@@ -39,9 +39,9 @@ export default function AllPosts() {
                   {post.body}
                   </p>
                   <div className="d-grid">
-                    <a href="#" className="btn btn-warning">
-                      Go somewhere
-                    </a>
+                    <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-warning">
+                     Read suck
+                    </Link>
                   </div>
                 </div>
               </div>
