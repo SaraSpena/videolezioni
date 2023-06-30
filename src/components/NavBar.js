@@ -15,6 +15,9 @@ export default function NavBar() {
             <NavLink className="nav-link active" aria-current="page"to="/">Home</NavLink>
           </li>
           <li className="nav-item">
+            <NavLink className="nav-link active" aria-current="page"to="/create">Create Post</NavLink>
+          </li>
+          <li className="nav-item">
             <NavLink className="nav-link active" aria-current="page"to="/posts">Posts</NavLink>
           </li>
           <li className="nav-item">

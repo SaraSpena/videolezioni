@@ -44,8 +44,10 @@ export default function AllPosts() {
                             <div className="card-body">
                                 <h5 className="card-title">{post.title}</h5>
                                 <p className="card-text">{post.body}</p>
-                                <div className='d-grid'>
-                                <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-primary">Go somewhere</Link>
+                                <div className='d-flex justify-content-between '>
+                                <Link to={`/delete/${post.id}/${post.userId}`} className="btn btn-primary">Delete</Link>
+                                <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-warning">Detail</Link>
+                                <Link to={`/create/${post.id}/${post.userId}`} className="btn btn-danger">Edit</Link>
                                 </div>
                             </div>
                         </div>
