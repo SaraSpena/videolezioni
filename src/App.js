@@ -7,6 +7,7 @@ import Home from './screens/Home';
 import Footer from './components/Footer';
 import AllPosts from './screens/AllPosts';
 import PostDetail from './screens/PostDetail';
+import CreatePost from './screens/CreatePost';
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
       <Routes>        
         <Route path='/' element={<Home/>}></Route>
         <Route path='/posts' element={<AllPosts/>}></Route>
-        <Route path='/posts/:postId' element={<PostDetail />}></Route>
+        <Route path='/create' element={<CreatePost/>}></Route>
+        <Route path='/create/:postId/:userId' element={<CreatePost/>}></Route>
+        <Route path='/posts/:postId/:userId' element={<PostDetail />}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/contact' element={<Contact/>}></Route>
       </Routes>

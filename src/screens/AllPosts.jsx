@@ -31,7 +31,7 @@ function AllPosts() {
                     {
                     loader ? 
                     <div className='col-12 text-center'> 
-                        <div class="spinner-border text-primary" role="status">
+                        <div className="spinner-border text-primary" role="status">
                         <span className="visually-hidden">Loading...</span>
                         </div>
                     </div>
@@ -42,8 +42,10 @@ function AllPosts() {
                                     <div className="card-body">
                                         <h5 className="card-title">{post.title}</h5>
                                         <p className="card-text">{post.body}</p>
-                                        <div className='d-grid'>
-                                            <Link to="#" className="btn btn-warning">Go somewhere</Link>
+                                        <div className='d-flex justify-content-between'>
+                                            <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-primary text-uppercase">Detail</Link>
+                                            <Link to={`/create/${post.id}/${post.userId}`} className="btn btn-warning text-uppercase">Edit</Link>
+                                            <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-danger text-uppercase">Delete</Link>
                                         </div>
                                     </div>
                                 </div>

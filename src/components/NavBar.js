@@ -18,6 +18,9 @@ export default function NavBar() {
             <NavLink className="nav-link text-uppercase" to="/posts">All Posts</NavLink>
           </li>
           <li className="nav-item">
+            <NavLink className="nav-link text-uppercase" to="/create">Create Post</NavLink>
+          </li>
+          <li className="nav-item">
             <NavLink className="nav-link text-uppercase" to="/about">About Us</NavLink>
           </li>
           <li className="nav-item">
