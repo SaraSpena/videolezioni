@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { API_BASE_URL } from '../config/constant';
+import {Link} from 'react'
 export default function AllPosts() {
     //Creamo uan variabil per salvare tutti i post e un metodo
     //set per aggiornare il valore dei post
@@ -44,7 +45,7 @@ export default function AllPosts() {
                                 <h5 className="card-title">{post.title}</h5>
                                 <p className="card-text">{post.body}</p>
                                 <div className='d-grid'>
-                                <a href="#" className="btn btn-primary">Go somewhere</a>
+                                <Link to="#" className="btn btn-primary">Go somewhere</Link>
                                 </div>
                             </div>
                         </div>
