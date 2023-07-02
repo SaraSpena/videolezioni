@@ -7,6 +7,7 @@ import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import AllPosts from './screens/AllPosts';
 import PostDetail from './screens/PostDetail';
+import CreatePost from './screens/CreatePost';
 function App() {
   return (
     <Router>
@@ -18,6 +19,8 @@ function App() {
         <Route exact path='/posts/:postId/:userId' element={<PostDetail/>}></Route>
         <Route exact path='/about' element={<About/>}></Route>
         <Route exact path='/contact' element={<Contact/>}></Route>
+        <Route exact path='/create' element={<CreatePost/>}></Route>
+        <Route exact path='/create/:postId/:userId' element={<CreatePost/>}></Route>
       </Routes>
       <Footer/>
     </div>

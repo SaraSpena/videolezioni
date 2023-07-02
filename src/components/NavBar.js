@@ -18,6 +18,9 @@ export default function NavBar() {
             <NavLink className="nav-link" aria-current="page" to="/about">About Us</NavLink>
           </li>
           <li className="nav-item">
+            <NavLink className="nav-link" aria-current="page" to="/create">Create Post</NavLink>
+          </li>
+          <li className="nav-item">
             <NavLink className="nav-link" to="/contact">Contact</NavLink>
           </li>
         </ul>
