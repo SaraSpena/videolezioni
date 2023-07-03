@@ -1,50 +1,40 @@
-import React, { useEffect } from 'react'
-import axios from 'axios';
-import { useParams } from 'react-router-dom'
-import { useState } from 'react';
-import { API_BASE_URL } from '../config/constant';
+import axios from "axios";
+import { React, useEffect, useState } from "react";
+import { API_BASE_URL } from "../config/constant";
+import { useNavigate, useParams } from "react-router-dom";
 
-export default function PostDetails() {
-   
-
-    const[name,setName] = useState()
-    const[phone,setPhone] = useState()
-    const[email,setEmail] = useState()
-    const[website,setWebsite] = useState()
-
-    const[body,setBody] = useState()
-    const[title,setTitle] = useState()
-
-    const {postId, userId } = useParams()
-
-    const getPostAndUser = ()=>{
-    axios.get(`${API_BASE_URL}/posts/${postId}`)
-    .then((postRes)=>{
-      const{title,body} = postRes.data;
-      setTitle(title);
-      setBody(body);
-        axios.get(`${API_BASE_URL}/users/${userId}`)
-        .then((userRes)=>{
-            const{name,phone,email,website} = userRes.data;
-            setName(name)
-            setEmail(email)
-            setPhone(phone)
-            setWebsite(website) 
-        }).catch((err) =>{
-            console.log(err);
+export default function PostDetail() {
+  const navigate=useNavigate();
+  const [title, setTitle] = useState();
+  const [body, setBody] = useState();
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [phone, setPhone] = useState();
+  const [website, setWebsite] = useState();
+  const { postId, userId } = useParams();
+  const getPostAndUser = () => {
+    axios
+      .get(`${API_BASE_URL}/posts/${postId}`)
+      .then((postRes) => {
+        const { title, body } = postRes.data;
+        setTitle(title);
+        setBody(body);
+        axios.get(`${API_BASE_URL}/users/${userId}`).then((userRes) => {
+          const { name, email, phone, website } = userRes.data;
+          setName(name);
+          setEmail(email);
+          setPhone(phone);
+          setWebsite(website);
         });
-    })
-    .catch((err) =>{
+      })
+      .catch((err) => {
         console.log(err);
-    });
-    }
-
-
-
-    useEffect(()=>{
-        getPostAndUser();
-    },[]);
-
+      });
+  };
+  useEffect(() => {
+    getPostAndUser();
+  }, []);
+  
   return (
     <div className='container'>
         <div className='row'>
@@ -77,10 +67,30 @@ export default function PostDetails() {
             <p className="card-text">{name}</p>
         </div>
         <ul className="list-group list-group-flush">
-            <li className="list-group-item">{email}</li>
-            <li className="list-group-item">{phone}</li>
-            <li className="list-group-item">{website}</li>
-        </ul>
+              <li className="list-group-item">
+                <a href={`mailto:${email}`}> {email}</a>
+              </li>
+              <li className="list-group-item">
+                <a href={`tel:${phone}`}> {phone}</a>
+              </li>
+              <li className="list-group-item">
+                <a href={`www.${website}`} target="blank">
+                  go to bocchi website
+                </a>
+              </li>
+              <li className="list-group-item">
+                <div className="d-block">
+                  <button
+                    onClick={() => {
+                      navigate(-1);
+                    }}
+                    className="btn btn-primary w-100 text-uppercase"
+                  >
+                    Back
+                  </button>
+                </div>
+              </li>
+            </ul>
         <div className="card-body">
             <a href="#" className="card-link">Card link</a>
             <a href="#" className="card-link">Another link</a>
