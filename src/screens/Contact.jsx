@@ -3,7 +3,7 @@ import './Contact.css'
 
 function Contact() {
     return (
-        <div className='container '>
+        <div className='container'>
             <h3 className='text-center text-uppercase pt-4'>Contact us</h3>
             <div className='mx-auto contact-form-container text-muted shadow-sm rounded p-3 lh-2'>
                 <form>
@@ -42,5 +42,4 @@ function Contact() {
         </div>
     )
 }
-
-export default Contact
+export default Contact;
