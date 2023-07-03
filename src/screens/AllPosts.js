@@ -1,30 +1,46 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { API_BASE_URL } from '../config/constant';
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import axios from "axios";
 export default function AllPosts() {
-    //Creamo uan variabil per salvare tutti i post e un metodo
-    //set per aggiornare il valore dei post
-    //useState hook aiuta a creare questa variabile con un array vuoto
-    const [posts,setPosts] = useState([])
-    const [loader,setLoader] = useState(true)
-    //ES6 function per caricare tutti i post
-    // function getAllPosts() {}
-    const getAllPosts=() => {
-        fetch(`${API_BASE_URL}/posts`)
-        
+    const navigate=useNavigate();
+    const [posts, setPosts] = useState([]);
+    const [loader, setLoader] = useState(true);
+    const getAllPosts = () => {
+      fetch(`${API_BASE_URL}/posts`)
         .then((response) => response.json())
         .then((json) => {
-            console.log(json)
-            setPosts(json);
-            setLoader(false);
+          console.log(json);
+          setPosts(json);
+          setLoader(false);
         });
-    }
-        //noi vogliamo caricare del data sulla pagina di questo componente
-        useEffect(() =>{
-            getAllPosts();
-        },[]); // un array vuoto significa che verra eseguito quando il componente carichera
-
+    };
+    useEffect(() => {
+      getAllPosts();
+    }, []);
+  
+    const deletePost = (postId) => {
+      let action=window.confirm("Are you sure to proceed?")
+      if (action){
+      axios.delete(`${API_BASE_URL}/posts/${postId}`)
+        .then((response) => {
+          console.log(response);
+          alertFunction('post cancellato bro','success');
+          navigate(`/posts`);
+        })
+        .catch((err) => {
+          console.error(err);
+          alertFunction('errore in fase di delete bro','danger');
+        });
+      }
+    };
+    function alertFunction(message, type) {
+      var wrapper = document.createElement('div')
+      wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+      var alertPlaceholder = document.getElementById('alertMessage')
+      alertPlaceholder.append(wrapper)
+  }
   return (
     <div> 
         <section className=' container pt-2'>
@@ -48,6 +64,7 @@ export default function AllPosts() {
                                 <Link to={`/delete/${post.id}/${post.userId}`} className="btn btn-primary">Delete</Link>
                                 <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-warning">Detail</Link>
                                 <Link to={`/create/${post.id}/${post.userId}`} className="btn btn-danger">Edit</Link>
+                                <button onClick={() => {deletePost(post.id);}}className="btn btn-danger text-uppercase">DELETE</button>
                                 </div>
                             </div>
                         </div>
