@@ -27,7 +27,7 @@ export default function AllPosts() {
       .then((response) => {
         console.log(response);
         alertFunction('post cancellato bro','success');
-        navigate(`/post`);
+        navigate(`/posts`);
       })
       .catch((err) => {
         console.error(err);
