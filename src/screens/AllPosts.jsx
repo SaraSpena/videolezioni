@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { API_BASE_URL } from '../config/constant';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
+import axios from 'axios';
+
 function AllPosts() {
+    const navigate = useNavigate();
     //Create a variable to store all posts and a set method to update the value of posts
     //useState hook helps us create this variable with empty array
     const [posts, setPosts] = useState([]);
@@ -18,6 +21,29 @@ function AllPosts() {
                 setLoader(false)
             });
     }
+    
+    function alertFunction(message, type) {
+        var wrapper = document.createElement('div')
+        wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+        var alertPlaceholder = document.getElementById('alertMessage');
+        alertPlaceholder.append(wrapper);
+    }
+
+    function deletePost(postId){
+        // eslint-disable-next-line no-restricted-globals
+        let action= window.confirm("Are you sure to proceed?");
+        if(action){
+        axios.delete(`${API_BASE_URL}/posts/${postId}`)
+        .then((resp)=>{
+            console.log(resp);
+            alertFunction(`post con id ${postId} has been deleted`, 'success');
+            navigate('/posts');
+        }).catch((e)=>{
+            alertFunction(`Error occurred`, 'danger')
+            console.log(e);
+        });
+    }
+    }
 
     useEffect(() => {
         getAllPosts();
@@ -27,7 +53,9 @@ function AllPosts() {
         <div>
             <section className='featured-posts container'>
                 <h3 className='text-center text-uppercase pt-4'>Featured posts</h3>
+                <div id="alertMessage"></div>
                 <div className='row'>
+
                     {
                     loader ? 
                     <div className='col-12 text-center'> 
@@ -45,7 +73,7 @@ function AllPosts() {
                                         <div className='d-flex justify-content-between'>
                                             <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-primary text-uppercase">Detail</Link>
                                             <Link to={`/create/${post.id}/${post.userId}`} className="btn btn-warning text-uppercase">Edit</Link>
-                                            <Link to={`/posts/${post.id}/${post.userId}`} className="btn btn-danger text-uppercase">Delete</Link>
+                                            <button onClick={()=>{deletePost(post.id)}} className="btn btn-danger text-uppercase">Delete</button>
                                         </div>
                                     </div>
                                 </div>

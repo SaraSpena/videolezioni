@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { API_BASE_URL } from '../config/constant';
 import { useParams } from "react-router-dom";
 
@@ -11,33 +11,37 @@ function CreatePost() {
     const { postId, userId } = useParams();
     const [isEdit, setIsEdit] = useState(false);
 
-    const createPost = (event) => {
-        setLoader(true);
-        event.preventDefault();
-        let methodType = 'POST';
-        let requestBody = JSON.stringify({
-            title: title,
-            body: body,
-            userId: 1,
-        });
-        
+    const populatedData = ()=>{
         if (postId) {
             setIsEdit(true);
-            methodType = 'PUT';
             setLoader(true);
             fetch(`${API_BASE_URL}/posts/${postId}`)
                 .then((response) => response.json())
                 .then((json) => {
                     console.log(json);
-                    requestBody = JSON.stringify({
-                        title: json.title,
-                        body: json.body,
-                        userId: userId,
-                    })
-                    setLoader(false)
+                    setTitle(json.title);
+                    setBody(json.body);
+                    setLoader(false);
                 });
         }
-    fetch(`${API_BASE_URL}/posts`, {
+    }
+
+    const createPost = (event) => {
+        setLoader(true);
+        event.preventDefault();
+        let methodType = 'POST';
+        let url = 'posts/';
+        if (postId) {
+            methodType='PUT';
+            url=`posts/${postId}`;
+
+        }
+        let requestBody = JSON.stringify({
+            title: title,
+            body: body,
+            userId: 1,
+        });
+    fetch(`${API_BASE_URL}/${url}`, {
         method: `${methodType}`,
         body: requestBody,
         headers: {
@@ -66,6 +70,10 @@ function CreatePost() {
         var alertPlaceholder = document.getElementById('alertMessage')
         alertPlaceholder.append(wrapper)
     }
+
+    useEffect(()=>{
+        populatedData();
+    },[])
 return (
 
     <div className='container'>
@@ -90,7 +98,7 @@ return (
                         <textarea onChange={(e) => { setBody(e.target.value) }} className="form-control" id="query" required></textarea>
                     </div>
                     <div className='d-grid'>
-                        <button type="submit" className="btn btn-primary">Create Post</button>
+                        <button type="submit" className="btn btn-primary"> {isEdit ? 'Edit Post' : 'Create Post'}</button>
                     </div>
 
                 </form>

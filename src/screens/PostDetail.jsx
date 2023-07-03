@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { API_BASE_URL } from "../config/constant";
 import './PostDetail.css'
 function PostDetail() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
@@ -81,6 +82,11 @@ function PostDetail() {
               <a target='_blank' href={`www.${website}`}>Website</a>
 
               </li>
+              <li className="list-group-item">
+                                <div className='d-block'>
+                                    <button onClick={() => { navigate(-1) }} className='btn btn-primary w-100 text-uppercase'>Back</button>
+                                </div>
+                            </li>
             </ul>
             <div className="card-body">
               <a href="#" className="card-link">
